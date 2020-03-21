@@ -15,17 +15,11 @@ I decided to split the work in two separated unity projects with the basic netwo
 1. The [Client Project](/UnityNetworkingAPI/UnityGameClient).
 2. The [Server Project](/UnityNetworkingAPI/UnityGameServer).
 
-There are base classes for the client and the server, that way, whenever I have to start a new project I am able inherit from the respective classes below and you are good to go. 
-
-1. The base class for a [Client Application](/UnityNetworkingAPI/UnityGameClient/Assets/Scripts/NetworkClient/BaseNetworkApplication.cs)
-2. The base class for a [Server Application](/UnityNetworkingAPI/UnityGameServer/Assets/Scripts/Server/BaseServerApplication.cs)
-
-These two classes are able to talk each other with the basic messages that make the server to work. They can be used to build a new project "on top".
-
+Once both projects are configurated there are base classes for the client and the server, in that way is just to inherit from the respective classes and you are good to go. 
 
 ### How to use it? 
 
-There are some steps in order to get everything working. They are described below.
+There are some steps in order to get everything working and configurated. They are described below.
 
 ### Creating the Server Application
 
