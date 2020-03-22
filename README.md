@@ -2,17 +2,17 @@
 
 # Unity Networking API
 
-The repository contains a solution for networking in Unity made with C# with no use of Unity's built-in HLAPI components. 
+The repository contains a solution for networking in Unity made in pure C# without the Unity's built-in HLAPI components. 
 Please consider that this is a project made for learning purposes, so there are some limitations and a lot of room for further improvements. 
 
 ### Objetives
 
-1. My main goal was to make two unitypackages, one for a client app and other for the server app.
-2. Both projects will be starting points whenever a multiplayer prototype pops up in my head.
+1. The main goal to make two unitypackages, client and server.
+2. Both are starting points for future multiplayer prototypes.
 
 ### Projects
 
-Here are the links for both unity projects with their networking functionalities:
+Here are the code for both unity projects with their networking functionalities:
 
 1. The [Client Project](/UnityNetworkingAPI/UnityGameClient).
 2. The [Server Project](/UnityNetworkingAPI/UnityGameServer).
@@ -22,30 +22,29 @@ Here are the links for both unity packages:
 1. The [Client UnityPackage](/UnityNetworkingAPI/UnityGameClient).
 2. The [Server UnityPackage](/UnityNetworkingAPI/UnityGameServer).
 
-### How to use it? and Demo Apps. 
+### How to use it? And Demo Apps. 
 
-You will be able to find Demo Apps with code and scenes that you can use to understand the projects. The demos are located inside each respective unity package. 
+You will be able to find inside each package demo applications that you can use to understand the projects. 
 
-Currently in the demo you can (all the messages are processed in the server side):
+Currently in the demo you can:
 
 1. Instantiate players;
-2. Move the players around and jump;
+2. Move players around and jump;
 3. Send text messages Client <-> Server;
+
+Note: all the messages are processed in the server side.
 
 Here is an image of two demo players connected to the server:
 <img width="450" height="200" src="/UnityNetworkingAPI/Images/TwoClients.GIF">
 
 Here are the content of the demo scenes:
 
-Server
+<img width="350" height="180" src="/UnityNetworkingAPI/Images/DemoServerApp.GIF"><img width="350" height="180" src="/UnityNetworkingAPI/Images/DemoClientApp.GIF">
 
-<img width="350" height="180" src="/UnityNetworkingAPI/Images/DemoServerApp.GIF">
 
-Client
+In a summary, once configurated, which is to fill a scriptable object with data, there are base classes for the each application, client and server. It's just to inherit from these respective classes and you are good to go. 
 
-<img width="350" height="180" src="/UnityNetworkingAPI/Images/DemoClientApp.GIF">
-
-In short words, once configurated, which is basically filling a scriptable object with some data, there are base classes for the each application, client and server. It's just to inherit from these respective classes and you are good to go. The steps are described below.
+The steps are described below.
 
 ### Creating the Server Application
 
