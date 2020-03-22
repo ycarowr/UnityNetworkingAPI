@@ -74,6 +74,7 @@ namespace UnityGameServer
                 /// </summary>
                 internal void Connect()
                 {
+                    Logger.Log($"Begin TCP listening at address: {_tcpListener.LocalEndpoint}", Color.black, "Server.Tcp");
                     _tcpListener.Start();
                     _tcpListener.BeginAcceptTcpClient(OnConnect, null);
                 }

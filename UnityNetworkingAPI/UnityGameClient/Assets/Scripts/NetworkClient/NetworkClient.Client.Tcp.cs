@@ -91,6 +91,7 @@ namespace UnityGameClient
                         ReceiveBufferSize = BufferSize,
                         SendBufferSize = BufferSize
                     };
+                    Logger.Log($"Attempt TCP Connection at IP: {Ip}, Port: {Port}", Color.blue, "Client.Tcp");
                     TcpClient.BeginConnect(Ip, Port, OnConnect, TcpClient);
                 }
 
@@ -117,6 +118,7 @@ namespace UnityGameClient
                         return;
 
                     object nullState = null;
+                    Logger.Log($"TCP Connected!" , Color.blue, "Client.Tcp");
                     GetStream().BeginRead(_receiveBuffer, 0, BufferSize, OnReceiveData, nullState);
                 }
 

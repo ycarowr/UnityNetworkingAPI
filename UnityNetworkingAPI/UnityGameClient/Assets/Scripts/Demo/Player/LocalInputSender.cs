@@ -32,6 +32,9 @@ namespace Demo
         /// </summary>
         void SendPlayerMovement(bool[] inputs, Quaternion rotation)
         {
+            if (!Application.isFocused)
+                return;
+            
             var packet = new Packet(PacketId.PlayerMovement);
             packet.Write(inputs.Length);
             foreach (var input in inputs)

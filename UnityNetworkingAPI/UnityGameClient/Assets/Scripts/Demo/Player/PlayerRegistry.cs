@@ -32,7 +32,7 @@ namespace Demo
             var player = Instantiate(playerPrefab);
             player.Initialize(id, username, position, rotation);
 
-            Debug.Log(GetType() + " Spawn Player, is local client: " + player.IsLocalClient);
+            Debug.Log(GetType() + $" Spawn Player, is local client id {id}: " + player.IsLocalClient);
             _players.Add(id, player);
 
             //Adds the input component for the local player.

@@ -33,26 +33,33 @@ namespace Demo
 
         void HandleMovement(Packet packet)
         {
+            var bytes = packet.ToArray();
+            var localPacket = new Packet(bytes);
+            localPacket.SetId((PacketId) localPacket.ReadInt());
             if (packet.Id != PacketId.PlayerPosition)
                 return;
-            var id = packet.ReadInt();
+            var id = localPacket.ReadInt();
+
             if (id != Id)
                 return;
-            var position = packet.ReadVector3();
+            var position = localPacket.ReadVector3();
             transform.position = position;
         }
 
         void HandleRotation(Packet packet)
         {
+            var bytes = packet.ToArray();
+            var localPacket = new Packet(bytes);
+            localPacket.SetId((PacketId) localPacket.ReadInt());
             if (packet.Id != PacketId.PlayerRotation)
                 return;
 
-            var id = packet.ReadInt();
+            var id = localPacket.ReadInt();
 
             if (id != Id)
                 return;
 
-            var rotation = packet.ReadQuaternion();
+            var rotation = localPacket.ReadQuaternion();
             transform.rotation = rotation;
         }
 

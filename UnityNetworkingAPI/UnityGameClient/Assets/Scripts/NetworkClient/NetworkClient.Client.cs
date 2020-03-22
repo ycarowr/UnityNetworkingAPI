@@ -52,8 +52,7 @@ namespace UnityGameClient
             {
                 if (IsConnected())
                     return;
-
-                Debug.Log("Attempt TCP Connection ...");
+                
                 _tcp.Connect();
             }
 
@@ -67,6 +66,7 @@ namespace UnityGameClient
                 var localEndPoint = client.LocalEndPoint;
                 var ipEndPoint = (IPEndPoint) localEndPoint;
                 var port = ipEndPoint.Port;
+                Logger.Log($"Attempt UDP Connection on IP: {ipEndPoint}, Port: {port} ", Color.blue, "Client");
                 _udp = new Udp(Configs);
                 _udp.Connect(port);
             }

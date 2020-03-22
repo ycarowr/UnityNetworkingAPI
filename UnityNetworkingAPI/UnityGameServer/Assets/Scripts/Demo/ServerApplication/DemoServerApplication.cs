@@ -10,7 +10,7 @@ namespace Demo
     {
         protected override void OnInitialize()
         {
-            Debug.Log("Demo Server Initialized!");
+            Logger.Log("Demo Server Initialized!", Color.black, GetType().ToString());
         }
 
         protected override void OnClientConnect(NetworkServer.IClient client)

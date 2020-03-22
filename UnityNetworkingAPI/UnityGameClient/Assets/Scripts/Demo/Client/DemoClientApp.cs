@@ -12,23 +12,22 @@ namespace Demo
 
         protected override void OnInitialize()
         {
-            Debug.Log("Demo Client Initialized!");
+            Logger.Log("Demo Client Initialized!", Color.black, GetType().ToString());
         }
 
         protected override void OnDisconnect()
         {
-            Debug.Log("Application has been Disconnected!");
+            Logger.Log("Application has been Disconnected!", Color.black, GetType().ToString());
         }
 
         protected override void OnConnect()
         {
-            Debug.Log("Application has been Connected!");
+            Logger.Log("Application has been Connected!", Color.black, GetType().ToString());
         }
 
         protected override void OnReceivePacket(Packet packet)
         {
-            Debug.Log($"Application has received a packet, id {packet.Id}!");
-
+            // Debug.Log($"Application has received a packet, id {packet.Id}!");
             //Handling a test package
             if (packet.Id != PacketId.TestPacket)
                 return;

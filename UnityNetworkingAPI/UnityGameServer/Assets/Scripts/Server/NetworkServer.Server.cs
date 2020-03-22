@@ -22,7 +22,7 @@ namespace UnityGameServer
             /// <summary>
             ///     UDP server connection.
             /// </summary>
-            readonly Udp _udp;
+            Udp _udp;
 
             /// <summary>
             ///     Private constructor.
@@ -38,7 +38,6 @@ namespace UnityGameServer
             {
                 _configs = configs;
                 _tcp = new Tcp(_configs);
-                _udp = new Udp(_configs);
             }
 
             /// <summary>
@@ -55,7 +54,7 @@ namespace UnityGameServer
                     return;
 
                 _tcp.Connect();
-                // _udp.Connect();
+                _udp = new Udp(_configs);
                 IsConnected = true;
             }
 
@@ -79,8 +78,7 @@ namespace UnityGameServer
             {
                 if (!IsConnected)
                     return;
-
-                packet.InsertId();
+                
                 _udp.SendData(id, packet);
             }
 

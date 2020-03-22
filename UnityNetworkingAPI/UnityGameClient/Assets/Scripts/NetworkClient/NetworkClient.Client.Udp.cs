@@ -46,7 +46,6 @@ namespace UnityGameClient
                 public void Connect(int port)
                 {
                     _udpClient = new UdpClient(port);
-                    Debug.Log("UDP Connect on " + _ipEndPoint);
                     _udpClient.Connect(_ipEndPoint);
                     _udpClient.BeginReceive(OnReceive, null);
                     var packet = new Packet(PacketId.TestPacket);
@@ -90,22 +89,10 @@ namespace UnityGameClient
                             if (packetLength <= 0)
                                 return;
                         }
-
-                        // var data = _udpClient.EndReceive(result, ref _ipEndPoint);
-                        // _udpClient.BeginReceive(OnReceive, null);
-                        // if (data.Length < 4)
-                        // {
-                        //     Debug.Log("Disconnect");
-                        //     Disconnect();
-                        //     return;
-                        // }
-                        //
-                        // HandleData(data);
                     }
                     catch (Exception e)
                     {
                         Debug.Log(e);
-                        // Disconnect();
                     }
                 }
 

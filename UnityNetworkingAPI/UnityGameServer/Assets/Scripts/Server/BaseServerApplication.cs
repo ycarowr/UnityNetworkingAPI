@@ -53,6 +53,7 @@ namespace UnityGameServer
             NetworkServer.OnClientConnect += OnClientConnect;
             NetworkServer.OnClientDisconnect += OnClientDisconnect;
             NetworkServer.OnClientReceivePacket += OnClientReceivedPacket;
+            Logger.Log("Subscribed Server's Network Events", Color.black, GetType().ToString());
         }
 
         void UnsubscribeNetworkEvents()
@@ -106,6 +107,7 @@ namespace UnityGameServer
             if (!NetworkServer.IsInitialized)
                 NetworkServer.Initialize(configs);
 
+            Logger.Log("Attempt to connect", Color.black, GetType().ToString());
             SubscribeNetworkEvents();
             NetworkServer.Connect();
         }

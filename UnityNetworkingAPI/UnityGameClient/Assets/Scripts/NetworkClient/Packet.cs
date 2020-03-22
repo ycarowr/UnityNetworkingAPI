@@ -91,7 +91,7 @@ namespace UnityGameClient
             return $"Packet id {Id}\n" +
                    $"Length: {Length}\n" +
                    $"Unread length: {UnreadLength}\n" +
-                   $"Count: {Length}\n";
+                   $"Index: {_index}\n";
         }
 
         public void Print()

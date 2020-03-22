@@ -34,15 +34,31 @@ namespace Demo
 
         void HandleMovement(NetworkServer.IClient client, Packet packet)
         {
-            if (packet.Id == PacketId.PlayerMovement)
+            try
             {
-                var inputLength = packet.ReadInt();
+                if(client.Id != Id)
+                    return;
+                
+                var bytes = packet.ToArray();
+                var localPacket = new Packet(bytes);
+                var packetLength = localPacket.ReadInt();
+                var clientId = localPacket.ReadInt();
+                localPacket.SetId((PacketId) localPacket.ReadInt());
+
+                if (localPacket.Id != PacketId.PlayerMovement)
+                    return;
+
+                var inputLength = localPacket.ReadInt();
                 var inputs = new bool[inputLength];
                 for (var index = 0; index < inputs.Length; index++)
-                    inputs[index] = packet.ReadBool();
-                var rotation = packet.ReadQuaternion();
+                    inputs[index] = localPacket.ReadBool();
+                var rotation = localPacket.ReadQuaternion();
 
                 SetInput(inputs, rotation);
+            }
+            catch (Exception e)
+            {
+                Debug.Log($"Error reading packet from client {client.Id}: " + e);
             }
         }
         

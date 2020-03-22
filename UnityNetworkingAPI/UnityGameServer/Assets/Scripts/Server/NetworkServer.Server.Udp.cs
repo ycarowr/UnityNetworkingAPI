@@ -12,6 +12,8 @@ namespace UnityGameServer
         /// </summary>
         public static void SendUdpData(int clientId, Packet packet)
         {
+            packet.InsertId();
+            packet.WriteLength();
             _server.SendUdpData(clientId, packet);
         }
 
@@ -20,6 +22,8 @@ namespace UnityGameServer
         /// </summary>
         public static void SendUdpDataToAll(Packet packet)
         {
+            packet.InsertId();
+            packet.WriteLength();
             var clients = _clientRegistry.GetClients();
             foreach (var i in clients)
                 _server.SendUdpData(i.Id, packet);
@@ -30,6 +34,8 @@ namespace UnityGameServer
         /// </summary>
         public static void SendUdpDataToAll(int exception, Packet packet)
         {
+            packet.InsertId();
+            packet.WriteLength();
             var clients = _clientRegistry.GetClients();
             foreach (var i in clients)
                 if (i.Id != exception)
@@ -68,7 +74,6 @@ namespace UnityGameServer
                     _configs = configs;
                     _udpListener = new UdpClient(_configs.Port);
                     Connect();
-                    Debug.Log("Begin UDP listening into: "+_udpListener.Client.LocalEndPoint);
                 }
 
                 /// <summary>
@@ -76,6 +81,7 @@ namespace UnityGameServer
                 /// </summary>
                 void Connect()
                 {
+                    Logger.Log($"Begin UDP listening at address {_udpListener.Client.LocalEndPoint}", Color.black, "Server.Udp");
                     _udpListener.BeginReceive(OnConnect, null);
                 }
 
@@ -132,7 +138,6 @@ namespace UnityGameServer
 
                 internal void SendData(int id, Packet packet)
                 {
-                    packet.WriteLength();
                     var client = _clientRegistry.GetClient(id);
                     var ipEndPoint = client.UdpConnection.IpEndPoint;
                     SendUdpDataInternal(ipEndPoint, packet);

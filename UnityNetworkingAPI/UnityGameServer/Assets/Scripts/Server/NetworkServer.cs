@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 namespace UnityGameServer
@@ -70,13 +71,13 @@ namespace UnityGameServer
             if (IsInitialized)
                 return;
 
-            Debug.Log("Initializing Server ...");
+            Logger.Log("Initializing Server ...", Color.blue, "NetworkServer");
 
             SetupConfigurations(configs);
             InitializeClientRegistry();
             InitializeServerConnections();
 
-            Debug.Log($"Server started on port {Port}.");
+            Logger.Log($"Server started on port {Port}.", Color.black, "NetworkServer");
             IsInitialized = true;
         }
 
@@ -85,11 +86,11 @@ namespace UnityGameServer
         /// </summary>
         static void SetupConfigurations(ServerConfigs configs)
         {
-            Debug.Log("Setting up configurations ...");
+            Logger.Log("Setting up configurations ...", Color.blue, "NetworkServer");
             Configs = configs;
             QualitySettings.vSyncCount = Configs.ServerVSyncDefault;
             Application.targetFrameRate = Configs.ServerFrameRate;
-            Debug.Log("Configurations set successfully.");
+            Logger.Log("Configurations set successfully.", Color.black, "NetworkServer");
         }
 
         /// <summary>
@@ -97,9 +98,9 @@ namespace UnityGameServer
         /// </summary>
         static void InitializeClientRegistry()
         {
-            Debug.Log("Initializing Client Registry ...");
+            Logger.Log("Initializing Client Registry ...", Color.blue, "NetworkServer");
             _clientRegistry = new ClientRegistry();
-            Debug.Log("Client Registry Successfully Initialized.");
+            Logger.Log("Client Registry Successfully Initialized.", Color.black, "NetworkServer");
         }
 
         /// <summary>
@@ -107,9 +108,9 @@ namespace UnityGameServer
         /// </summary>
         static void InitializeServerConnections()
         {
-            Debug.Log("Initializing Server Connections ...");
+            Logger.Log("Initializing Server Connections ...", Color.blue, "NetworkServer");
             _server = new Server(Configs);
-            Debug.Log("Server Connections Initialized.");
+            Logger.Log("Server Connections Initialized.", Color.black, "NetworkServer");
         }
 
         #endregion
@@ -131,6 +132,7 @@ namespace UnityGameServer
             _server.Disconnect();
             _server = null;
             IsInitialized = false;
+            Logger.Log("Server Disconnected", Color.red, "NetworkServer");
         }
 
         /// <summary>
@@ -142,6 +144,7 @@ namespace UnityGameServer
                 return;
 
             _server.Connect();
+            Logger.Log("Server Connected!", Color.black, "NetworkServer");
         }
 
         /// <summary>

@@ -48,7 +48,7 @@ namespace UnityGameClient
             if (IsInitialized)
                 return;
 
-            Debug.Log("Initialize Networking System");
+            Logger.Log("Initialize Network Client", Color.blue, "NetworkClient");
             Configs = configs;
             _client = new Client(Configs);
             IsInitialized = true;
@@ -61,7 +61,7 @@ namespace UnityGameClient
         {
             if (!IsInitialized)
                 return;
-            Debug.Log("Client Requested Connection ...");
+            Logger.Log("Client Requested Connection ...", Color.blue, "NetworkClient");
             if (_client == null)
                 _client = new Client(Configs);
 
@@ -78,7 +78,7 @@ namespace UnityGameClient
 
             _client?.Disconnect();
             _client = null;
-            Debug.Log("Client Disconnected");
+            Logger.Log("Client Disconnected", Color.red, "NetworkClient");
         }
 
         /// <summary>
@@ -137,10 +137,9 @@ namespace UnityGameClient
             welcomeResponse.Write(Configs.UserName);
             SendTcpData(welcomeResponse);
             welcomeResponse.Dispose();
-            Debug.Log("Attempt UDP Connection ...");
             _client.ConnectUdp();
             OnConnect.Invoke();
-            Debug.Log($"Application Connected: Server Message: {msg}, your id is {id}");
+            Logger.Log($"<b>Application Connected: Server Message: {msg}, your id is {id}</b>", Color.blue, "NetworkClient");
         }
     }
 }
