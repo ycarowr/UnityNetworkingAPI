@@ -56,13 +56,14 @@ The easiest way to do it is described below:
 4. Change the parent class of the script to `BaseServerApplication` 
 5. Drop the script into a gameObject inside the scene.
 6. Drag and drop the scriptable object that contains the server configurations. The asset is located at: `UnityNetworkingAPI/UnityGameServer/Assets/ServerConfigs.asset`
-7. Override the necessary methods.
 
-It should look like this picture from the demo: 
+It should look like this picture from the [DemoServerApp.cs](/UnityNetworkingAPI/UnityGameServer/Assets/Scripts/Demo/ServerApplication/DemoServerApplication.cs) : 
 
 <img width="450" height="200" src="/UnityNetworkingAPI/Images/DemoServerAppGO.GIF">
 
-The demo scene is inside the project. Here is the script: [DemoServerApp.cs](/UnityNetworkingAPI/UnityGameServer/Assets/Scripts/Demo/ServerApplication/DemoServerApplication.cs) 
+7. Press Play and you should be able to see the following start up logs: 
+
+<img width="550" height="500" src="/UnityNetworkingAPI/Images/ServerStartUpLogs.GIF">
 
 ### Creating the Client Application
 
