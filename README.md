@@ -17,10 +17,7 @@ Here are the code of both projects:
 1. The [Client Project](/UnityNetworkingAPI/UnityGameClient).
 2. The [Server Project](/UnityNetworkingAPI/UnityGameServer).
 
-Here are the links for both unity packages:
-
-1. The [Client UnityPackage](/UnityNetworkingAPI/UnityGameClient).
-2. The [Server UnityPackage](/UnityNetworkingAPI/UnityGameServer).
+Here is the link to both [Unity Packages](/UnityNetworkingAPI/Versions).
 
 ### How to use it? And Demo Apps
 
@@ -52,7 +49,7 @@ The easiest way to create a server app is described below:
 5. Drop the script into a gameObject inside the scene.
 6. Drag and drop the scriptable object that contains the server configurations. The asset is located at: `UnityNetworkingAPI/UnityGameServer/Assets/ServerConfigs.asset`
 
-It should look like this picture from the [DemoServerApp.cs](/UnityNetworkingAPI/UnityGameServer/Assets/Scripts/Demo/ServerApplication/DemoServerApplication.cs) : 
+It should look like this picture from the [DemoServerApp.cs](/UnityNetworkingAPI/UnityGameServer/Assets/UnityGameServer/Scripts/Demo/ServerApplication/DemoServerApplication.cs) : 
 
 <img width="450" height="200" src="/UnityNetworkingAPI/Images/DemoServerAppGO.GIF">
 
@@ -71,7 +68,7 @@ The client application has almost the same set of steps as the server:
 5. Drop the script into a gameObject inside the scene.
 6. Drag and drop the scriptable object that contains the client configurations. The asset is located at: `UnityNetworkingAPI/UnityGameClient/Assets/ClientConfigs.asset`
 
-It should look like this picture from the [DemoClientApp.cs](/UnityNetworkingAPI/UnityGameClient/Assets/Scripts/Demo/Client/DemoClientApp.cs) : 
+It should look like this picture from the [DemoClientApp.cs](/UnityNetworkingAPI/UnityGameClient/Assets/UnityGameClient/Scripts/Demo/Client/DemoClientApp.cs) : 
 
 <img width="400" height="200" src="/UnityNetworkingAPI/Images/DemoClientAppGO.GIF">
 
