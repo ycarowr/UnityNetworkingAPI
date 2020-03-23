@@ -50,7 +50,7 @@ The steps are described below.
 
 The easiest way to do it is described below:
 
-1. Download the Server UnityPackage and import it into your game. [here](/UnityNetworkingAPI/UnityGameServer).
+1. Download the Server UnityPackage and import it into your game server. [here](/UnityNetworkingAPI/UnityGameServer).
 2. Create a new script and open it. 
 3. Add the following import on top `using UnityGameServer;` 
 4. Change the parent class of the script to `BaseServerApplication` 
@@ -61,13 +61,29 @@ It should look like this picture from the [DemoServerApp.cs](/UnityNetworkingAPI
 
 <img width="450" height="200" src="/UnityNetworkingAPI/Images/DemoServerAppGO.GIF">
 
-7. Press Play and you should be able to see the following start up logs: 
+7. Press Play and you should be able to see the following start up logs, which means the server is online in your local machine: 
 
 <img width="550" height="500" src="/UnityNetworkingAPI/Images/ServerStartUpLogs.GIF">
 
 ### Creating the Client Application
 
-#### Configurating the Client
+The client application has a similar set of steps:
+
+1. Download the Client UnityPackage and import it into your game client. [here](/UnityNetworkingAPI/UnityGameClient).
+2. Create a new script and open it. 
+3. Add the following import on top `using UnityGameClient;` 
+4. Change the parent class of the script to `BaseNetworkApplication` 
+5. Drop the script into a gameObject inside the scene.
+6. Drag and drop the scriptable object that contains the server configurations. The asset is located at: `UnityNetworkingAPI/UnityGameClient/Assets/ClientConfigs.asset`
+
+It should look like this picture from the [DemoClientApp.cs](/UnityNetworkingAPI/UnityGameClient/Assets/Scripts/Demo/Client/DemoClientApp.cs) : 
+
+<img width="400" height="200" src="/UnityNetworkingAPI/Images/DemoClientAppGO.GIF">
+
+7. Press Play and, if the server is online in your local machine, you should be able to see the following start up logs: 
+
+<img width="550" height="250" src="/UnityNetworkingAPI/Images/ClientStartUpLogs.GIF">
+
 
 ### References
 
