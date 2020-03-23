@@ -15,11 +15,6 @@ namespace Demo
         readonly Dictionary<int, PlayerController> _players = new Dictionary<int, PlayerController>();
 
         /// <summary>
-        ///     Client network application.
-        /// </summary>
-        [SerializeField] DemoClientApp clientApp;
-
-        /// <summary>
         ///     Player Prefab.
         /// </summary>
         [SerializeField] PlayerController playerPrefab;
