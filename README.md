@@ -1,4 +1,5 @@
 [![Unity Version](https://img.shields.io/badge/Unity-2019.2.19f1%2B-blue.svg)](https://unity3d.com/get-unity/download)
+[![Twitter](https://img.shields.io/twitter/follow/LagrangeSpot.svg?label=Follow@LagrangeSpot&style=social)](https://twitter.com/intent/follow?screen_name=LagrangeSpot)
 
 # Unity Networking API
 
