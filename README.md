@@ -8,7 +8,7 @@ Please consider that this is a project made for learning purposes, so there are 
 
 ### Objetives
 
-The main goal is to have two unitypackages, client and server, whitch will be starting points for future multiplayer prototypes.
+The main goal is to have two unitypackages, client and server, whitch will be starting points for future multiplayer prototypes. And also learn the basics of networking.
 
 ### Projects
 
