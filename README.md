@@ -41,14 +41,9 @@ Here are the content of the demo scenes:
 
 <img width="350" height="180" src="/UnityNetworkingAPI/Images/DemoServerApp.GIF"><img width="350" height="180" src="/UnityNetworkingAPI/Images/DemoClientApp.GIF">
 
-
-In a summary, once configurated, which is to fill a scriptable object with data, there are base classes for the each application, client and server. It's just to inherit from these respective classes and you are good to go. 
-
-The steps are described below.
-
 ### Creating the Server Application
 
-The easiest way to do it is described below:
+The easiest way to create a server app is described below:
 
 1. Download the Server UnityPackage and import it into your game server. [here](/UnityNetworkingAPI/UnityGameServer).
 2. Create a new script and open it. 
