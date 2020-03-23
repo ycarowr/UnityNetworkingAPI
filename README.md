@@ -4,7 +4,7 @@
 # Unity Networking API
 
 The repository contains a solution for networking in Unity, it's made in pure C# without the usage of Unity's built-in HLAPI components. 
-Please consider that this is a project made for learning purposes, so there are some limitations and a lot of room for further improvements. 
+Please consider that this is a project made for learning purposes, so there are limitations, bugs and a lot of room for further improvements, feel free to mail me with suggestions about the architecture or anything else. 
 
 ### Objetives
 
