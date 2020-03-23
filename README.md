@@ -47,7 +47,7 @@ The easiest way to create a server app is described below:
 3. Add the following import on top: `using UnityGameServer;` 
 4. Change the parent class of the script to: `BaseServerApplication` 
 5. Drop the script into a gameObject inside the scene.
-6. Drag and drop the scriptable object that contains the server configurations. The asset is located at: `UnityNetworkingAPI/UnityGameServer/Assets/ServerConfigs.asset`
+6. Drag and drop the scriptable object that contains the server configurations. The asset is located at: `UnityNetworkingAPI/UnityGameServer/Assets/UnityGameServer/ServerConfigs.asset`
 
 It should look like this picture from the [DemoServerApp.cs](/UnityNetworkingAPI/UnityGameServer/Assets/UnityGameServer/Scripts/Demo/ServerApplication/DemoServerApplication.cs) : 
 
@@ -66,7 +66,7 @@ The client application has almost the same set of steps as the server:
 3. Add the following import on top: `using UnityGameClient;` 
 4. Change the parent class of the script to: `BaseNetworkApplication` 
 5. Drop the script into a gameObject inside the scene.
-6. Drag and drop the scriptable object that contains the client configurations. The asset is located at: `UnityNetworkingAPI/UnityGameClient/Assets/ClientConfigs.asset`
+6. Drag and drop the scriptable object that contains the client configurations. The asset is located at: `UnityNetworkingAPI/UnityGameClient/Assets/UnityGameClient/ClientConfigs.asset`
 
 It should look like this picture from the [DemoClientApp.cs](/UnityNetworkingAPI/UnityGameClient/Assets/UnityGameClient/Scripts/Demo/Client/DemoClientApp.cs) : 
 
