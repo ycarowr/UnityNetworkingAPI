@@ -45,10 +45,10 @@ Here are the content of the demo scenes:
 
 The easiest way to create a server app is described below:
 
-1. Download the Server UnityPackage and import it into your game server. [here](/UnityNetworkingAPI/UnityGameServer).
+1. Download the Server UnityPackage and import it into your game server. Link [here](/UnityNetworkingAPI/UnityGameServer).
 2. Create a new script and open it. 
-3. Add the following import on top `using UnityGameServer;` 
-4. Change the parent class of the script to `BaseServerApplication` 
+3. Add the following import on top: `using UnityGameServer;` 
+4. Change the parent class of the script to: `BaseServerApplication` 
 5. Drop the script into a gameObject inside the scene.
 6. Drag and drop the scriptable object that contains the server configurations. The asset is located at: `UnityNetworkingAPI/UnityGameServer/Assets/ServerConfigs.asset`
 
@@ -62,14 +62,14 @@ It should look like this picture from the [DemoServerApp.cs](/UnityNetworkingAPI
 
 ### Creating the Client Application
 
-The client application has a similar set of steps:
+The client application has almost the same set of steps as the server:
 
-1. Download the Client UnityPackage and import it into your game client. [here](/UnityNetworkingAPI/UnityGameClient).
+1. Download the Client UnityPackage and import it into your game client. Link [here](/UnityNetworkingAPI/UnityGameClient).
 2. Create a new script and open it. 
-3. Add the following import on top `using UnityGameClient;` 
-4. Change the parent class of the script to `BaseNetworkApplication` 
+3. Add the following import on top: `using UnityGameClient;` 
+4. Change the parent class of the script to: `BaseNetworkApplication` 
 5. Drop the script into a gameObject inside the scene.
-6. Drag and drop the scriptable object that contains the server configurations. The asset is located at: `UnityNetworkingAPI/UnityGameClient/Assets/ClientConfigs.asset`
+6. Drag and drop the scriptable object that contains the client configurations. The asset is located at: `UnityNetworkingAPI/UnityGameClient/Assets/ClientConfigs.asset`
 
 It should look like this picture from the [DemoClientApp.cs](/UnityNetworkingAPI/UnityGameClient/Assets/Scripts/Demo/Client/DemoClientApp.cs) : 
 
@@ -79,6 +79,10 @@ It should look like this picture from the [DemoClientApp.cs](/UnityNetworkingAPI
 
 <img width="550" height="250" src="/UnityNetworkingAPI/Images/ClientStartUpLogs.GIF">
 
+
+After both applications are connected a player will be instantiated and you will be able to move and using the keyboard WASD and Space.
+
+Feel free to use the tool as you need :)
 
 ### References
 
