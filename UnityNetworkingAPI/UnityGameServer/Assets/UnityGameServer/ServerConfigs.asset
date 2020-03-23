@@ -12,5 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3086aaed927443dab907ed71d3dac241, type: 3}
   m_Name: ServerConfigs
   m_EditorClassIdentifier: 
+  bufferSize: 4096
   limitOfConnections: 50
   port: 26950
+  serverFrameRate: 30
+  serverVSyncDefault: 0
