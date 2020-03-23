@@ -8,12 +8,11 @@ Please consider that this is a project made for learning purposes, so there are 
 
 ### Objetives
 
-1. The main goal to make two unitypackages, client and server.
-2. Both are starting points for future multiplayer prototypes.
+The main goal is to have two unitypackages, client and server, whitch will be starting points for future multiplayer prototypes.
 
 ### Projects
 
-Here are the code for both unity projects with their networking functionalities:
+Here are the code of both projects:
 
 1. The [Client Project](/UnityNetworkingAPI/UnityGameClient).
 2. The [Server Project](/UnityNetworkingAPI/UnityGameServer).
@@ -23,9 +22,9 @@ Here are the links for both unity packages:
 1. The [Client UnityPackage](/UnityNetworkingAPI/UnityGameClient).
 2. The [Server UnityPackage](/UnityNetworkingAPI/UnityGameServer).
 
-### How to use it? And Demo Apps. 
+### How to use it? And Demo Apps
 
-You will be able to find inside each package demo applications that you can use to understand the projects. 
+Inside each package there are demo applications made to help with understanding the tool.
 
 Currently in the demo you can:
 
